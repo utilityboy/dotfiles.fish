@@ -1,12 +1,118 @@
 // Place your key bindings in this file to overwrite the defaults
+// Place your key bindings in this file to overwrite the defaults
 [
 	{
-		"key": "shift+enter",
-		"command": "go.test.cursorOrPrevious",
-		"when": "editorTextFocus && editorLangId == 'go' && !findInputFocused && !replaceActive"
+		"key": "ctrl+j",
+		"command": "editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
 	},
 	{
-		"key": "ctrl+shift+enter",
-		"command": "go.test.package"
+		"key": "ctrl+space",
+		"command": "-editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
 	},
+	{
+		"key": "ctrl+k ctrl+d",
+		"command": "editor.action.formatDocument",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+f",
+		"command": "-editor.action.formatDocument",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+k cmd+b",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "cmd+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "shift+cmd+enter",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "cmd+k right",
+		"command": "workbench.action.splitEditor"
+	},
+	{
+		"key": "cmd+k left",
+		"command": "-workbench.action.splitEditor"
+	},
+	{
+		"key": "shift+cmd+l",
+		"command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+		"when": "editorHasSelection && editorTextFocus"
+	},
+	{
+		"key": "cmd+0",
+		"command": "workbench.action.zoomReset"
+	},
+	{
+		"key": "cmd+numpad0",
+		"command": "-workbench.action.zoomReset"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
+		"key": "shift+cmd+w",
+		"command": "workbench.action.closeGroup"
+	},
+	{
+		"key": "shift+cmd+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "shift+cmd+\\",
+		"command": "-editor.action.jumpToBracket",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+cmd+\\",
+		"command": "workbench.files.action.showActiveFileInExplorer"
+	},
+	{
+		"key": "alt+cmd+\\",
+		"command": "-workbench.files.action.showActiveFileInExplorer"
+	},
+	{
+		"key": "alt+cmd+r",
+		"command": "extension.railsGoToSpec",
+		"when": "editorTextFocus && editorLangId == ruby"
+	},
+	{
+		"key": "shift+cmd+y",
+		"command": "-extension.railsGoToSpec",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+cmd+enter",
+		"command": "workbench.action.toggleEditorWidths"
+	},
+	{
+		"key": "cmd+d",
+		"command": "-editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "cmd+d",
+		"command": "extension.caseSensitiveAddNext",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "-extension.caseSensitiveAddNext",
+		"when": "editorFocus"
+	}
 ]
